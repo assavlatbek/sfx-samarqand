@@ -46,7 +46,9 @@ const Header = () => {
           <div className={styles.nav__logo}>
             <h1 onClick={() => (window.location.href = "/")}>SFX</h1>
           </div>
-          <ul className={`${headerOpen ? styles.headerOpen : ""}`}>
+          <ul
+            className={`${headerOpen ? styles.headerOpen : styles.headerClose}`}
+          >
             <Link
               href="/"
               to="skills"
@@ -257,19 +259,17 @@ const Header = () => {
             </Link>
           </ul>
           <div className={styles.nav__actions}>
-            <Magnetic>
-              <Image
-                src={
-                  headerOpen ? "/images/png/close.png" : "/images/png/open.png"
-                }
-                onClick={() => {
-                  setHeaderOpen(!headerOpen);
-                }}
-                alt="menu"
-                width={50}
-                height={50}
-              />
-            </Magnetic>
+            <Image
+              src={
+                headerOpen ? "/images/png/close.png" : "/images/png/open.png"
+              }
+              onClick={() => {
+                setHeaderOpen(!headerOpen);
+              }}
+              alt="menu"
+              width={50}
+              height={50}
+            />
           </div>
         </nav>
       </div>
