@@ -55,8 +55,8 @@ const Header = () => {
                   setHeaderOpen(!headerOpen);
                 }}
                 alt="menu"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
               />
             </Magnetic>
           </div>
@@ -76,6 +76,25 @@ const Header = () => {
             }`}
           >
             <Link
+              href="#mexmonxonalar"
+              activeClass="activeHeader"
+              to="#mexmonxonalar"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+              className={styles.category}
+            >
+              <Magnetic>
+                <li
+                  onMouseEnter={(e) => sliderMouseOver(e)}
+                  onMouseLeave={(e) => sliderMouseLeave(e)}
+                >
+                  Mexmonxonalar
+                </li>
+              </Magnetic>
+            </Link>
+            <Link
               href="/"
               to="#"
               activeClass="activeHeader"
@@ -91,6 +110,26 @@ const Header = () => {
                   onMouseLeave={(e) => sliderMouseLeave(e)}
                 >
                   Gipermarket
+                </li>
+              </Magnetic>
+            </Link>
+
+            <Link
+              href="/"
+              activeClass="activeHeader"
+              to="#"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+              className={styles.category}
+            >
+              <Magnetic>
+                <li
+                  onMouseEnter={(e) => sliderMouseOver(e)}
+                  onMouseLeave={(e) => sliderMouseLeave(e)}
+                >
+                  Ko'p qavatli xonadonlar
                 </li>
               </Magnetic>
             </Link>
@@ -110,44 +149,6 @@ const Header = () => {
                   onMouseLeave={(e) => sliderMouseLeave(e)}
                 >
                   Bank
-                </li>
-              </Magnetic>
-            </Link>
-            <Link
-              href="/"
-              activeClass="activeHeader"
-              to="#"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={700}
-              className={styles.category}
-            >
-              <Magnetic>
-                <li
-                  onMouseEnter={(e) => sliderMouseOver(e)}
-                  onMouseLeave={(e) => sliderMouseLeave(e)}
-                >
-                  Mehmonxonalar
-                </li>
-              </Magnetic>
-            </Link>
-            <Link
-              href="/"
-              activeClass="activeHeader"
-              to="#"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={700}
-              className={styles.category}
-            >
-              <Magnetic>
-                <li
-                  onMouseEnter={(e) => sliderMouseOver(e)}
-                  onMouseLeave={(e) => sliderMouseLeave(e)}
-                >
-                  Ko'p qavatli xonadonlar
                 </li>
               </Magnetic>
             </Link>
@@ -306,7 +307,7 @@ const Header = () => {
                   setThemeDark(!themeDark);
                 }}
               >
-                {themeDark ? <FaSun size={30} /> : <BsMoonFill size={30} />}
+                {themeDark ? <FaSun size={28} /> : <BsMoonFill size={28} />}
               </button>
             </Magnetic>
           </div>

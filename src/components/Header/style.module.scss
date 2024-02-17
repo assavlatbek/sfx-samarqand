@@ -87,7 +87,7 @@
       z-index: 99999;
       width: 100% !important;
       height: 100vh;
-      top: 90px;
+      top: 70px;
       padding: 20px 0;
       background: #ffffff;
       display: flex !important;
@@ -116,13 +116,13 @@
       display: none;
     }
     &__actions {
-      img {
-        margin-right: 10px;
+      img:first-child {
+        margin-left: -8px;
       }
       button {
         background: transparent !important;
         border: none !important;
-        margin-right: 12px !important;
+        margin-right: 2px;
       }
     }
   }
