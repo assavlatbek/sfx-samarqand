@@ -1,14 +1,16 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import Magnetic from "@/commons/Magnetic";
-import styles from "./styles.module.scss";
-import { FaBarsStaggered } from "react-icons/fa6";
+import styles from "./style.module.scss";
 import { Link } from "react-scroll";
+import { BsMoonFill } from "react-icons/bs";
+import { FaSun } from "react-icons/fa";
 import Image from "next/image";
 
 const Header = () => {
   const sliderRef = useRef(null);
   const [headerOpen, setHeaderOpen] = useState(false);
+  const [themeDark, setThemeDark] = useState(false);
   const [shrink, setShrink] = useState(false);
 
   useEffect(() => {
@@ -43,15 +45,32 @@ const Header = () => {
       <div className="container">
         <nav className={styles.nav}>
           <div ref={sliderRef} className={styles.indicator}></div>
+          <div className={styles.nav__actions}>
+            <Magnetic>
+              <Image
+                src={
+                  headerOpen ? "/images/png/close.png" : "/images/png/open.png"
+                }
+                onClick={() => {
+                  setHeaderOpen(!headerOpen);
+                }}
+                alt="menu"
+                width={50}
+                height={50}
+              />
+            </Magnetic>
+          </div>
           <div className={styles.nav__logo}>
-            <h1 onClick={() => (window.location.href = "/")}>SFX</h1>
+            <h1 onClick={() => (window.location.href = "/")}>SXF</h1>
           </div>
           <ul
-            className={`${headerOpen ? styles.headerOpen : styles.headerClose}`}
+            className={` ${
+              headerOpen ? styles.headerOpen : styles.headerClose
+            }`}
           >
             <Link
               href="/"
-              to="skills"
+              to="#"
               activeClass="activeHeader"
               spy={true}
               smooth={true}
@@ -71,7 +90,7 @@ const Header = () => {
             <Link
               href="/"
               activeClass="activeHeader"
-              to="experiences"
+              to="#"
               spy={true}
               smooth={true}
               offset={-100}
@@ -90,7 +109,7 @@ const Header = () => {
             <Link
               href="/"
               activeClass="activeHeader"
-              to="students"
+              to="#"
               spy={true}
               smooth={true}
               offset={-100}
@@ -109,7 +128,7 @@ const Header = () => {
             <Link
               href="/"
               activeClass="activeHeader"
-              to="projects"
+              to="#"
               spy={true}
               smooth={true}
               offset={-100}
@@ -146,7 +165,7 @@ const Header = () => {
             <Link
               href="/"
               activeClass="activeHeader"
-              to="contact"
+              to="#"
               spy={true}
               smooth={true}
               offset={-100}
@@ -165,7 +184,7 @@ const Header = () => {
             <Link
               href="/"
               activeClass="activeHeader"
-              to="contact"
+              to="#"
               spy={true}
               smooth={true}
               offset={-100}
@@ -184,7 +203,7 @@ const Header = () => {
             <Link
               href="/"
               activeClass="activeHeader"
-              to="contact"
+              to="#"
               spy={true}
               smooth={true}
               offset={-100}
@@ -203,7 +222,7 @@ const Header = () => {
             <Link
               href="/"
               activeClass="activeHeader"
-              to="contact"
+              to="#"
               spy={true}
               smooth={true}
               offset={-100}
@@ -222,7 +241,7 @@ const Header = () => {
             <Link
               href="/"
               activeClass="activeHeader"
-              to="contact"
+              to="#"
               spy={true}
               smooth={true}
               offset={-100}
@@ -241,7 +260,7 @@ const Header = () => {
             <Link
               href="/"
               activeClass="activeHeader"
-              to="contact"
+              to="#"
               spy={true}
               smooth={true}
               offset={-100}
@@ -259,17 +278,30 @@ const Header = () => {
             </Link>
           </ul>
           <div className={styles.nav__actions}>
-            <Image
-              src={
-                headerOpen ? "/images/png/close.png" : "/images/png/open.png"
-              }
-              onClick={() => {
-                setHeaderOpen(!headerOpen);
-              }}
-              alt="menu"
-              width={50}
-              height={50}
-            />
+            <Magnetic>
+              <button
+                onMouseEnter={(e) => {
+                  const left = e.currentTarget.offsetLeft;
+                  const width = e.currentTarget.getBoundingClientRect().width;
+                  sliderRef.current.style.left = `${left + width / 2}px`;
+                  sliderRef.current.style.width = `5px`;
+                  sliderRef.current.style.height = `5px`;
+                  sliderRef.current.style.borderRadius = `50%`;
+                }}
+                onMouseLeave={(e) => {
+                  sliderRef.current.style.left = `15px`;
+                  sliderRef.current.style.width = `50px`;
+                  sliderRef.current.style.height = `3px`;
+                  sliderRef.current.style.borderRadius = `15px`;
+                }}
+                onClick={() => {
+                  document.body.classList.toggle("dark");
+                  setThemeDark(!themeDark);
+                }}
+              >
+                {themeDark ? <FaSun size={25} /> : <BsMoonFill size={25} />}
+              </button>
+            </Magnetic>
           </div>
         </nav>
       </div>
