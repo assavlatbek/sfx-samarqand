@@ -1,45 +1,45 @@
 import Image from "next/image";
 import styles from "./style.module.scss";
 
-const Gipermarket = () => {
+function Pinthouslar() {
   return (
-    <section id={styles.gipermarket}>
+    <section id={styles.pinthouslar}>
       <div className="container">
         <h1 className="sec-title" data-aos="fade-up">
-          Gipermarket
+          Pinthouslar
         </h1>
         <div className={styles.row}>
-          <div className={styles.row_content} data-aos="zoom-in">
+          <div className={styles.row_content} data-aos="zoom-out">
             <Image
-              src={"/images/gipermarket/1.jpg"}
+              src={"/images/pinthouslar/1.jpg"}
               width={300}
               height={300}
               alt="image"
             />
-            <h2>Gipermarket</h2>
+            <h2>Pinthouslar</h2>
           </div>
-          <div className={styles.row_content} data-aos="zoom-in">
+          <div className={styles.row_content} data-aos="zoom-out">
             <Image
-              src={"/images/gipermarket/3.jpg"}
+              src={"/images/pinthouslar/2.jpg"}
               width={300}
               height={300}
               alt="image"
             />
-            <h2>Gipermarket</h2>
+            <h2>Pinthouslar</h2>
           </div>
-          <div className={styles.row_content} data-aos="zoom-in">
+          <div className={styles.row_content} data-aos="zoom-out">
             <Image
-              src={"/images/gipermarket/4.jpg"}
+              src={"/images/pinthouslar/3.jpg"}
               width={300}
               height={300}
               alt="image"
             />
-            <h2>Gipermarket</h2>
+            <h2>Pinthouslar</h2>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
-export default Gipermarket;
+export default Pinthouslar;

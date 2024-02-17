@@ -1,0 +1,36 @@
+.footer {
+  background: #000;
+  color: #fff;
+}
+
+.footer_row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  align-items: center;
+  span {
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-weight: 300;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  img {
+    filter: grayscale(300%);
+    filter: invert(120%);
+  }
+}
+
+@media (max-width: 850px) {
+  .footer_row {
+    display: block;
+    text-align: center;
+  }
+  .footer_side h1 {
+    font-size: 23px;
+  }
+}

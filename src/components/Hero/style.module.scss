@@ -9,11 +9,35 @@
   .bg {
     width: 100%;
     height: 100vh;
-    background: #0000006c;
+    background: #000000b8;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     text-align: center;
+    h1 {
+      font-size: 43px;
+      font-weight: 900;
+      @media (max-width: 850px) {
+        font-size: 29px !important;
+        margin: 10px auto;
+      }
+    }
+    p {
+      max-width: 850px;
+      margin: 20px auto;
+      @media (max-width: 850px) {
+        max-width: 300px !important;
+      }
+    }
+    button {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      font-size: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
   }
 }

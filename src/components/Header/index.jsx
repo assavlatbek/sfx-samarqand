@@ -113,7 +113,25 @@ const Header = () => {
                 </li>
               </Magnetic>
             </Link>
-
+            <Link
+              href="/"
+              activeClass="activeHeader"
+              to="#"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+              className={styles.category}
+            >
+              <Magnetic>
+                <li
+                  onMouseEnter={(e) => sliderMouseOver(e)}
+                  onMouseLeave={(e) => sliderMouseLeave(e)}
+                >
+                  Pinthouslar
+                </li>
+              </Magnetic>
+            </Link>
             <Link
               href="/"
               activeClass="activeHeader"
@@ -170,25 +188,7 @@ const Header = () => {
                 </li>
               </Magnetic>
             </Link>
-            <Link
-              href="/"
-              activeClass="activeHeader"
-              to="#"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={700}
-              className={styles.category}
-            >
-              <Magnetic>
-                <li
-                  onMouseEnter={(e) => sliderMouseOver(e)}
-                  onMouseLeave={(e) => sliderMouseLeave(e)}
-                >
-                  Pinthouslar
-                </li>
-              </Magnetic>
-            </Link>
+
             <Link
               href="/"
               activeClass="activeHeader"

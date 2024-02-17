@@ -5,8 +5,10 @@ function Mexmonxonalar() {
   return (
     <section id={styles.mexmonxonalar}>
       <div className="container">
-        <h1 className="sec-title">Mexmonxonalar</h1>
-        <div className={styles.first_content}>
+        <h1 className="sec-title" data-aos="fade-up">
+          Mexmonxonalar
+        </h1>
+        <div className={styles.first_content} data-aos="zoom-in">
           <Image
             src={"/images/mexmonxonalar/1.jpg"}
             width={1000}
@@ -16,7 +18,7 @@ function Mexmonxonalar() {
           <h2>Mexmonxonalar</h2>
         </div>
         <div className={styles.row}>
-          <div className={styles.row_content}>
+          <div className={styles.row_content} data-aos="zoom-out">
             <Image
               src={"/images/mexmonxonalar/4.jpg"}
               width={300}
@@ -25,7 +27,7 @@ function Mexmonxonalar() {
             />
             <h2>Mexmonxonalar</h2>
           </div>
-          <div className={styles.row_content}>
+          <div className={styles.row_content} data-aos="zoom-out">
             <Image
               src={"/images/mexmonxonalar/3.jpg"}
               width={300}
@@ -34,7 +36,7 @@ function Mexmonxonalar() {
             />
             <h2>Mexmonxonalar</h2>
           </div>
-          <div className={styles.row_content}>
+          <div className={styles.row_content} data-aos="zoom-out">
             <Image
               src={"/images/mexmonxonalar/2.jpg"}
               width={300}
