@@ -61,7 +61,14 @@ const Header = () => {
             </Magnetic>
           </div>
           <div className={styles.nav__logo}>
-            <h1 onClick={() => (window.location.href = "/")}>SXF</h1>
+            <h1 onClick={() => (window.location.href = "/")}>
+              <Image
+                src={"/images/png/logo.png"}
+                width={80}
+                height={70}
+                alt="logo"
+              />
+            </h1>
           </div>
           <ul
             className={` ${
@@ -299,7 +306,7 @@ const Header = () => {
                   setThemeDark(!themeDark);
                 }}
               >
-                {themeDark ? <FaSun size={25} /> : <BsMoonFill size={25} />}
+                {themeDark ? <FaSun size={30} /> : <BsMoonFill size={30} />}
               </button>
             </Magnetic>
           </div>
