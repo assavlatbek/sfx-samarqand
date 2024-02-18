@@ -9,7 +9,7 @@ function Pinthouslar() {
           Pinthouslar
         </h1>
         <div className={styles.row}>
-          <div className={styles.row_content} data-aos="zoom-out">
+          <div className={styles.row_content} data-aos="zoom-in">
             <Image
               src={"/images/pinthouslar/1.jpg"}
               width={300}
@@ -18,7 +18,7 @@ function Pinthouslar() {
             />
             <h2>Pinthouslar</h2>
           </div>
-          <div className={styles.row_content} data-aos="zoom-out">
+          <div className={styles.row_content} data-aos="zoom-in">
             <Image
               src={"/images/pinthouslar/2.jpg"}
               width={300}
@@ -27,7 +27,7 @@ function Pinthouslar() {
             />
             <h2>Pinthouslar</h2>
           </div>
-          <div className={styles.row_content} data-aos="zoom-out">
+          <div className={styles.row_content} data-aos="zoom-in">
             <Image
               src={"/images/pinthouslar/3.jpg"}
               width={300}

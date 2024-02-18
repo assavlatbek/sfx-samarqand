@@ -18,7 +18,7 @@ function Mexmonxonalar() {
           <h2>Mexmonxonalar</h2>
         </div>
         <div className={styles.row}>
-          <div className={styles.row_content} data-aos="zoom-out">
+          <div className={styles.row_content} data-aos="zoom-in">
             <Image
               src={"/images/mexmonxonalar/4.jpg"}
               width={300}
@@ -27,7 +27,7 @@ function Mexmonxonalar() {
             />
             <h2>Mexmonxonalar</h2>
           </div>
-          <div className={styles.row_content} data-aos="zoom-out">
+          <div className={styles.row_content} data-aos="zoom-in">
             <Image
               src={"/images/mexmonxonalar/3.jpg"}
               width={300}
@@ -36,7 +36,7 @@ function Mexmonxonalar() {
             />
             <h2>Mexmonxonalar</h2>
           </div>
-          <div className={styles.row_content} data-aos="zoom-out">
+          <div className={styles.row_content} data-aos="zoom-in">
             <Image
               src={"/images/mexmonxonalar/2.jpg"}
               width={300}
