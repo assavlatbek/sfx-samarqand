@@ -1,5 +1,8 @@
 #mexmonxonalar {
   padding: 20px 0;
+  h1 {
+    margin-top: 20px;
+  }
 }
 .row {
   display: grid;
@@ -12,7 +15,9 @@
     overflow: hidden !important;
     height: 300px;
     border-radius: 30px;
-    margin: 20px 0;
+    @media (max-width: 850px) {
+      margin: 20px 0;
+    }
     img {
       transition: 0.5s all;
       width: 100% !important;
@@ -35,6 +40,7 @@
   width: 100% !important;
   overflow: hidden !important;
   height: 600px;
+  margin: 20px 0;
   margin-bottom: 20px;
   border-radius: 30px;
   img {

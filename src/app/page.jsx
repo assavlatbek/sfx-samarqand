@@ -10,6 +10,7 @@ import AOS from "aos";
 import { useEffect } from "react";
 import Pinthouslar from "@/components/Pinthouslar";
 import Footer from "@/components/Footer";
+import Obyektlar from "@/components/Obyeklar";
 
 export default function Home() {
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function Home() {
       <Mexmonxonalar />
       <Gipermarket />
       <Pinthouslar />
+      <Obyektlar />
       <Footer />
     </>
   );
